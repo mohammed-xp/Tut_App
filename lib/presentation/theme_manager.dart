@@ -52,9 +52,70 @@ ThemeData getApplicationTheme() {
     ),
 
     // text theme
-
+    textTheme: TextTheme(
+      displayLarge: getLightStyle(
+        color: ColorManager.white,
+        fontSize: FontSize.s22,
+      ),
+      headline1: getSemiBoldStyle(
+        color: ColorManager.darkGrey,
+        fontSize: FontSize.s16,
+      ),
+      subtitle1: getMediumStyle(
+        color: ColorManager.lightGrey,
+        fontSize: FontSize.s14,
+      ),
+      caption: getRegularStyle(color: ColorManager.grey1,),
+      bodyText1: getRegularStyle(color: ColorManager.grey,),
+    ),
 
     // input decoration theme (text form field)
+    inputDecorationTheme: InputDecorationTheme(
+      // content padding
+      contentPadding: const EdgeInsets.all(AppPadding.p8),
+      // hint style
+      hintStyle: getRegularStyle(color: ColorManager.grey,
+      fontSize: FontSize.s14,
+      ),
+      // label style
+      labelStyle: getMediumStyle(color: ColorManager.grey,
+        fontSize: FontSize.s14,
+      ),
+      // error style
+      errorStyle: getRegularStyle(color: ColorManager.error,),
+      // enable border style
+      enabledBorder: const OutlineInputBorder(
+        borderSide: BorderSide(
+          color: ColorManager.primary,
+          width: AppSize.s1_5,
+        ),
+        borderRadius: BorderRadius.all(Radius.circular(AppSize.s8))
+      ),
+      // focus border style
+      focusedBorder: const OutlineInputBorder(
+          borderSide: BorderSide(
+            color: ColorManager.grey,
+            width: AppSize.s1_5,
+          ),
+          borderRadius: BorderRadius.all(Radius.circular(AppSize.s8))
+      ),
+      // error border style
+      errorBorder: const OutlineInputBorder(
+          borderSide: BorderSide(
+            color: ColorManager.error,
+            width: AppSize.s1_5,
+          ),
+          borderRadius: BorderRadius.all(Radius.circular(AppSize.s8))
+      ),
+      // focus error border style
+      focusedErrorBorder: const OutlineInputBorder(
+          borderSide: BorderSide(
+            color: ColorManager.primary,
+            width: AppSize.s1_5,
+          ),
+          borderRadius: BorderRadius.all(Radius.circular(AppSize.s8))
+      ),
+    ),
 
   );
 }
